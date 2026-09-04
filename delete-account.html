@@ -31,15 +31,14 @@
 <body>
 
 <h1>Delete Account &amp; Data — Drop &amp; Merge 2048</h1>
-<p class="updated">Last updated: 29 August 2026</p>
+<p class="updated">Last updated: 4 September 2026</p>
 
 <p>
   <strong>Drop &amp; Merge 2048</strong> (developer: Fenerich Soft, Android package
-  <code>com.marcelfenerich.dropmerge2048</code>) does not create or manage its own user
-  accounts. When you sign in, that sign-in is your <strong>Google Play Games profile</strong>,
-  which belongs to your Google Account and is controlled by Google, not by us. Your
-  leaderboard scores and achievement unlocks for this game are stored as part of that
-  Play Games profile.
+  <code>com.marcelfenerich.dropmerge2048</code>) creates no account of its own. The optional
+  sign-in in the Game is a <strong>Google Play Games profile</strong>, created and controlled by
+  Google under your Google Account, not by us. Your leaderboard scores and achievement unlocks
+  for this game are stored as part of that Play Games profile.
 </p>
 
 <h2>How to delete your Play Games data</h2>
@@ -67,6 +66,26 @@
   your device. Delete it any time via Android
   <em>Settings → Apps → Drop &amp; Merge 2048 → Storage → Clear data</em>, or by
   uninstalling the app.
+</p>
+
+<h2>Analytics data</h2>
+<p>
+  The Game sends gameplay statistics to <strong>Google Analytics for Firebase</strong>. How that
+  data can be deleted depends on whether you were signed in:
+</p>
+<ul>
+  <li><strong>Not signed in to Play Games.</strong> The data is tied to an app-instance identifier
+      generated on your device. Clearing the Game's data or uninstalling resets that identifier, and
+      there is no way for us — or for you — to look up the earlier records, because nothing links
+      them to you.</li>
+  <li><strong>Signed in to Play Games.</strong> Your Play Games player identifier is also used as the
+      analytics identifier, so the data can be located and deleted on request. Email us at the address
+      below and we will submit a deletion request to Google for that identifier. Deleting your Play
+      Games profile using the steps above also breaks the link for the future.</li>
+</ul>
+<p>
+  Analytics data is in any case deleted automatically by Google once our configured retention period
+  expires.
 </p>
 
 <h2>Questions</h2>
