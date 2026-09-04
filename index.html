@@ -33,7 +33,7 @@
 <body>
 
 <h1>Privacy Policy for Drop &amp; Merge 2048</h1>
-<p class="updated">Last updated: 4 September 2026</p>
+<p class="updated">Last updated: 5 September 2026</p>
 
 <p>
   This Privacy Policy explains how <strong>Fenerich Soft</strong> ("we", "us", "our")
@@ -54,8 +54,9 @@
       your Play Games player identifier is used to recognise you across reinstalls.</li>
   <li>The Game <strong>includes</strong> an advertising-mediation SDK but <strong>does not currently display
       any ads</strong>. Should that change, this policy will be updated first.</li>
-  <li>Purchases are processed entirely by <strong>Google Play Billing</strong>. We never receive or store your
-      payment card or billing details.</li>
+  <li>Payment is processed by <strong>Google Play Billing</strong> — we never receive or store your payment card
+      or billing details. The <strong>Unity In-App Purchasing</strong> SDK that the Game uses to reach Play
+      Billing sends transaction and device data to Unity for receipt validation and fraud prevention.</li>
   <li>The Game is <strong>not directed to children under 13</strong>.</li>
 </ul>
 
@@ -115,6 +116,32 @@
   We use this only in aggregate, to see which features are used and whether players return.
 </p>
 
+<h3>2.5 In-app purchases</h3>
+<p>
+  Purchases themselves are processed by <strong>Google Play Billing</strong>. We never receive or store your
+  payment card or billing details.
+</p>
+<p>
+  The Game uses the <strong>Unity In-App Purchasing SDK</strong> to talk to Google Play Billing, and that SDK
+  sends its own data to Unity Technologies — separately from the analytics described above, and for Unity's own
+  purposes including receipt validation and fraud prevention. According to Unity, it is transmitted when a
+  purchase is started, when payment options are shown, and when a purchase is paid, fails, or is completed, and
+  includes:
+</p>
+<ul>
+  <li><strong>Identifiers</strong> — Unity's own installation identifier, advertising identifiers (the Google
+      Advertising ID on Android), and the analytics app-instance identifier.</li>
+  <li><strong>Purchase history</strong> — the transaction and receipt for each in-app purchase.</li>
+  <li><strong>Device and diagnostic data</strong> — device model, operating-system version, language, crash logs
+      and app performance data.</li>
+  <li><strong>Approximate location and email address</strong> — which Unity states are processed transiently
+      rather than stored.</li>
+</ul>
+<p>
+  Unity does not offer a mechanism for players to request deletion of this data. See
+  <a href="./delete-account.html">Delete Account &amp; Data</a> for what that means in practice.
+</p>
+
 <h2>3. How information is used</h2>
 <table>
   <tr><th>Purpose</th><th>Data used</th></tr>
@@ -122,13 +149,13 @@
   <tr><td>Optional leaderboard and achievements</td><td>Google Play Games player identifier, run scores, achievement unlocks — sent to and stored by Google Play Games, not by us</td></tr>
   <tr><td>Understand how the Game is played and whether players return</td><td>App-instance identifier, Google Advertising ID, Play Games player identifier when signed in, gameplay events, device and coarse region data (via Google Analytics for Firebase)</td></tr>
   <tr><td>Display and measure advertising</td><td>Not currently applicable — the Game shows no ads. The mediation SDKs are bundled but not initialised</td></tr>
-  <tr><td>Process in-app purchases</td><td>Handled by Google Play Billing; we receive only an anonymous transaction confirmation</td></tr>
+  <tr><td>Process in-app purchases</td><td>Payment handled by Google Play Billing; we receive only an anonymous transaction confirmation. The Unity IAP SDK additionally sends transaction, identifier and device data to Unity for receipt validation and fraud prevention (see 2.5)</td></tr>
 </table>
 
 <h2>4. Third-party services</h2>
 <p>The following third parties may process data through the Game. Please review their privacy policies:</p>
 <ul>
-  <li>Unity Technologies (Unity LevelPlay / ironSource, Unity Ads) —
+  <li>Unity Technologies (Unity In-App Purchasing; Unity LevelPlay / ironSource and Unity Ads, bundled but inactive) —
       <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener" target="_blank">Unity Game Player and App User Privacy Policy</a>
       and <a href="https://www.is.com/privacy-policy/" rel="noopener" target="_blank">ironSource Privacy Policy</a></li>
   <li>Google (Google Play, Google Play Billing, Google Play Games Services, Google Play services,
@@ -159,7 +186,8 @@
   <li><strong>Analytics</strong> — signing out of, or deleting, your Play Games profile stops your player
       identifier being used as the analytics identifier. Clearing the Game's data or uninstalling resets the
       app-instance identifier. To request deletion of analytics data already collected, contact us at the
-      address in Section 10.</li>
+      address in Section 10 — but note that we can act on our own Analytics property only, and not on the
+      purchase data held by Unity, which offers no deletion mechanism (see 2.5).</li>
   <li><strong>Local data</strong> — clear it any time via Android <em>Settings → Apps → Drop &amp; Merge 2048 →
       Storage → Clear data</em>, or by uninstalling.</li>
   <li><strong>Play Games profile and account deletion</strong> — see
@@ -178,7 +206,8 @@
   We operate no servers of our own and retain no personal data on them. Local game data persists on your device
   until you clear it or uninstall. Analytics data is held by Google Analytics for Firebase and retained for the
   period configured on our Analytics property, after which Google deletes the underlying user-level records;
-  aggregated reporting may persist beyond that. Data held by other third-party SDKs is retained according to
+  aggregated reporting may persist beyond that. Purchase data sent to Unity is retained by Unity under its own
+  policy, and we have no control over that period. Data held by other third-party SDKs is retained according to
   their own policies.
 </p>
 
