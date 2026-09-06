@@ -33,7 +33,7 @@
 <body>
 
 <h1>Privacy Policy for Drop &amp; Merge 2048</h1>
-<p class="updated">Last updated: 5 September 2026</p>
+<p class="updated">Last updated: 6 September 2026</p>
 
 <p>
   This Privacy Policy explains how <strong>Fenerich Soft</strong> ("we", "us", "our")
@@ -52,8 +52,12 @@
   <li>The Game uses <strong>Google Analytics for Firebase</strong> to understand how the Game is played —
       which screens and features are used, and whether players return. If you are signed in to Play Games,
       your Play Games player identifier is used to recognise you across reinstalls.</li>
-  <li>The Game <strong>includes</strong> an advertising-mediation SDK but <strong>does not currently display
-      any ads</strong>. Should that change, this policy will be updated first.</li>
+  <li>The Game shows <strong>rewarded video ads</strong>, and only ones you choose to watch: when a run ends you
+      may be offered the chance to carry on by watching an ad, at most twice per run. There are no banner ads and
+      no ads that interrupt play. Advertising is served through Unity LevelPlay (ironSource) mediation — see
+      Section 2.3 for what that collects.</li>
+  <li>We do <strong>not</strong> serve personalised advertising. The Game signals to the advertising SDK that
+      consent for personalisation has not been given.</li>
   <li>Payment is processed by <strong>Google Play Billing</strong> — we never receive or store your payment card
       or billing details. The <strong>Unity In-App Purchasing</strong> SDK that the Game uses to reach Play
       Billing sends transaction and device data to Unity for receipt validation and fraud prevention.</li>
@@ -83,15 +87,25 @@
   This data is not transmitted to us and is removed when you uninstall the Game or clear its data.
 </p>
 
-<h3>2.3 Advertising SDKs (bundled, not currently active)</h3>
+<h3>2.3 Advertising</h3>
 <p>
-  The Game bundles the Unity LevelPlay (ironSource) advertising-mediation SDK and the Unity Ads SDK.
-  <strong>The Game does not currently display advertising</strong>, and these SDKs are not initialised, so they
-  do not presently collect or share data. If advertising is introduced in a future version, those SDKs and the
-  advertising networks they mediate may collect and share with third parties device and advertising identifiers
-  (including the Google Advertising ID), technical device data such as device model, operating-system version,
-  language and network type, and ad interaction data such as ads served, viewed and clicked. This policy and the
-  Google Play Data safety declaration will be updated before that happens.
+  The Game uses the Unity LevelPlay (ironSource) advertising-mediation SDK together with the Unity Ads SDK to
+  show <strong>rewarded video advertising</strong>. The only advertising placement in the Game is optional and
+  player-initiated: when a run ends, you may be offered the chance to continue that run by watching an ad, up to
+  twice per run. Declining costs you nothing but the run, and there is no advertising anywhere else in the Game.
+</p>
+<p>
+  These SDKs are initialised when the Game starts, not only when an ad is shown, and from that point they and the
+  advertising networks they mediate may collect and share with third parties: device and advertising identifiers
+  (including the Google Advertising ID); technical device data such as device model, operating-system version,
+  language and network type; coarse location inferred from your IP address; and ad interaction data such as ads
+  served, viewed, completed and clicked. The networks mediated by LevelPlay may act as independent controllers of
+  the data they collect, and the set of active networks may change over time.
+</p>
+<p>
+  <strong>Advertising in the Game is non-personalised.</strong> Before the advertising SDK is initialised, the Game
+  signals to it that consent for personalised advertising has not been given, and that signal is passed on to the
+  mediated networks. You can additionally reset or delete your Google Advertising ID at any time — see Section 6.
 </p>
 
 <h3>2.4 Analytics</h3>
@@ -148,14 +162,14 @@
   <tr><td>Provide core game functionality and save progress</td><td>Local device storage only</td></tr>
   <tr><td>Optional leaderboard and achievements</td><td>Google Play Games player identifier, run scores, achievement unlocks — sent to and stored by Google Play Games, not by us</td></tr>
   <tr><td>Understand how the Game is played and whether players return</td><td>App-instance identifier, Google Advertising ID, Play Games player identifier when signed in, gameplay events, device and coarse region data (via Google Analytics for Firebase)</td></tr>
-  <tr><td>Display and measure advertising</td><td>Not currently applicable — the Game shows no ads. The mediation SDKs are bundled but not initialised</td></tr>
+  <tr><td>Display and measure rewarded advertising you choose to watch</td><td>Google Advertising ID, device and network data, coarse location from IP address, and ad interaction data (served, viewed, completed, clicked) — processed by Unity LevelPlay (ironSource) and the networks it mediates. Non-personalised only (see 2.3)</td></tr>
   <tr><td>Process in-app purchases</td><td>Payment handled by Google Play Billing; we receive only an anonymous transaction confirmation. The Unity IAP SDK additionally sends transaction, identifier and device data to Unity for receipt validation and fraud prevention (see 2.5)</td></tr>
 </table>
 
 <h2>4. Third-party services</h2>
 <p>The following third parties may process data through the Game. Please review their privacy policies:</p>
 <ul>
-  <li>Unity Technologies (Unity In-App Purchasing; Unity LevelPlay / ironSource and Unity Ads, bundled but inactive) —
+  <li>Unity Technologies (Unity In-App Purchasing; Unity LevelPlay / ironSource mediation and Unity Ads) —
       <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener" target="_blank">Unity Game Player and App User Privacy Policy</a>
       and <a href="https://www.is.com/privacy-policy/" rel="noopener" target="_blank">ironSource Privacy Policy</a></li>
   <li>Google (Google Play, Google Play Billing, Google Play Games Services, Google Play services,
@@ -175,8 +189,11 @@
   (analytics, in aggregate).
 </p>
 <p>
-  The Game does not serve personalised advertising and does not currently show an in-game consent prompt.
-  If personalised advertising is introduced, consent will be collected before any such processing begins.
+  The Game does not serve personalised advertising, and it shows no in-game consent prompt. Instead, on every
+  launch and before the advertising SDK is initialised, the Game signals to that SDK that consent for
+  personalisation has not been given, so the mediated networks are instructed to serve non-personalised
+  advertising only. If personalised advertising is introduced, a consent prompt will be added and consent
+  collected before any such processing begins.
 </p>
 
 <h2>6. Your choices and rights</h2>
