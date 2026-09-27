@@ -1,6 +1,6 @@
 # dropmerge-legal
 
-Public legal pages for the Android game **Drop & Merge 2048**
+Public legal pages for the Android game **Neko Driver 2048 Puzzle**
 (`com.marcelfenerich.dropmerge2048`).
 
 ## Publish with GitHub Pages
